@@ -90,7 +90,7 @@ address {
 }
 
 /* Button */
-[type='button'] {
+.header-button {
   background-color: var(--color-brand-normal);
   color: var(--color-primary-light);
   border: 2px solid var(--color-brand-normal);
@@ -100,7 +100,7 @@ address {
   padding: 16px 32px;
 }
 
-[type='button']:hover {
+.header-button:hover {
   background-color: transparent;
   color: var(--color-brand-dark);
 }
@@ -295,6 +295,26 @@ address {
   font-size: 14px;
 }
 
+/* Carousel-button */
+.carousel-button {
+  fill: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 /* Contact-section */
 .contact-title {
   margin-bottom: 16px;
@@ -307,6 +327,11 @@ address {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.address-social {
+  fill: var(--color-primary-light);
+  /* stroke: red; */
 }
 
 .address-link {
