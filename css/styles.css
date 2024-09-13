@@ -49,7 +49,9 @@ body {
 }
 
 /* Base */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -61,6 +63,10 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 ul {
@@ -245,6 +251,21 @@ address {
   content: '';
 }
 
+.chefs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
@@ -257,9 +278,23 @@ address {
   font-size: 40px;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Formats section */
 .formats-title {
   margin-bottom: 80px;
+}
+
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .format-title {
@@ -299,6 +334,7 @@ address {
 .carousel-button {
   fill: var(--color-primary-dark);
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -316,8 +352,22 @@ address {
 }
 
 /* Contact-section */
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 22px;
+}
+
 .contact-title {
   margin-bottom: 16px;
+}
+
+.contact-map {
+  flex-shrink: 0;
+  border-radius: 16px;
 }
 
 /* Footer section */
@@ -327,6 +377,25 @@ address {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.address-list {
+  flex-grow: 1;
 }
 
 .address-social {
